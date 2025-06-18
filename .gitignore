@@ -192,3 +192,13 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+
+# --------- Custom ignores --------- #
+.idea/
+.vscode/
+.zed.
+base-models
+*__pycache__/
+*.pyc
+datasets

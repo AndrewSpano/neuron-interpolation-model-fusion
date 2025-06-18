@@ -1,0 +1,77 @@
+% \begin{table}[h]
+    % \centering
+    % \small
+    \begin{tabular}{lccc}
+        \toprule
+        Name & split by 2 & split by 4 & split by 6 \\
+        \midrule
+        Individual Models  & \begin{tabular}[c]{@{}l@{}} {{ data[2]['individual_models'][0].mean }} ($\pm$ {{ data[2]['individual_models'][0].std }}) \\
+                                                         {{ data[2]['individual_models'][1].mean }} ($\pm$ {{ data[2]['individual_models'][1].std }}) \end{tabular}
+                           & \begin{tabular}[c]{@{}l@{}} {{ data[4]['individual_models'][0].mean }} ($\pm$ {{ data[4]['individual_models'][0].std }}) \\
+                                                         {{ data[4]['individual_models'][1].mean }} ($\pm$ {{ data[4]['individual_models'][1].std }}) \\
+                                                         {{ data[4]['individual_models'][2].mean }} ($\pm$ {{ data[4]['individual_models'][2].std }}) \\
+                                                         {{ data[4]['individual_models'][3].mean }} ($\pm$ {{ data[4]['individual_models'][3].std }}) \end{tabular}
+                           & \begin{tabular}[c]{@{}l@{}} {{ data[6]['individual_models'][0].mean }} ($\pm$ {{ data[6]['individual_models'][0].std }}) \\
+                                                         {{ data[6]['individual_models'][1].mean }} ($\pm$ {{ data[6]['individual_models'][1].std }}) \\
+                                                         {{ data[6]['individual_models'][2].mean }} ($\pm$ {{ data[6]['individual_models'][2].std }}) \\
+                                                         {{ data[6]['individual_models'][3].mean }} ($\pm$ {{ data[6]['individual_models'][3].std }}) \\
+                                                         {{ data[6]['individual_models'][4].mean }} ($\pm$ {{ data[6]['individual_models'][4].std }}) \\
+                                                         {{ data[6]['individual_models'][5].mean }} ($\pm$ {{ data[6]['individual_models'][5].std }}) \end{tabular} \\[1ex] \hline
+        Vanilla Averaging               & {{ data[2]['vanilla_averaging'].mean }} ($\pm$ {{ data[2]['vanilla_averaging'].std }})
+                                        & {{ data[4]['vanilla_averaging'].mean }} ($\pm$ {{ data[4]['vanilla_averaging'].std }})
+                                        & {{ data[6]['vanilla_averaging'].mean }} ($\pm$ {{ data[6]['vanilla_averaging'].std }}) \\
+        Last-layer KD                   & {{ data[2]['alf_methods']['alf-2-logit-kd'].mean }} ($\pm$ {{ data[2]['alf_methods']['alf-2-logit-kd'].std }})
+                                        & {{ data[4]['alf_methods']['alf-4-logit-kd'].mean }} ($\pm$ {{ data[4]['alf_methods']['alf-4-logit-kd'].std }})
+                                        & {{ data[6]['alf_methods']['alf-6-logit-kd'].mean }} ($\pm$ {{ data[6]['alf_methods']['alf-6-logit-kd'].std }}) \\
+        Ensemble                        & {{ data[2]['ensemble'].mean }} ($\pm$ {{ data[2]['ensemble'].std }})
+                                        & {{ data[4]['ensemble'].mean }} ($\pm$ {{ data[4]['ensemble'].std }})
+                                        & {{ data[6]['ensemble'].mean }} ($\pm$ {{ data[6]['ensemble'].std }}) \\ \hline
+        OTF Uniform                     & {{ data[2]['otf_methods']['otf-2-uniform'].mean }} ($\pm$ {{ data[2]['otf_methods']['otf-2-uniform'].std }})
+                                        & {{ data[4]['otf_methods']['otf-4-uniform'].mean }} ($\pm$ {{ data[4]['otf_methods']['otf-4-uniform'].std }})
+                                        & {{ data[6]['otf_methods']['otf-6-uniform'].mean }} ($\pm$ {{ data[6]['otf_methods']['otf-6-uniform'].std }}) \\
+        OTF Conductance                 & {{ data[2]['otf_methods']['otf-2-conductance'].mean }} ($\pm$ {{ data[2]['otf_methods']['otf-2-conductance'].std }})
+                                        & {{ data[4]['otf_methods']['otf-4-conductance'].mean }} ($\pm$ {{ data[4]['otf_methods']['otf-4-conductance'].std }})
+                                        & {{ data[6]['otf_methods']['otf-6-conductance'].mean }} ($\pm$ {{ data[6]['otf_methods']['otf-6-conductance'].std }}) \\
+        OTF DeepLIFT                    & {{ data[2]['otf_methods']['otf-2-deeplift'].mean }} ($\pm$ {{ data[2]['otf_methods']['otf-2-deeplift'].std }})
+                                        & {{ data[4]['otf_methods']['otf-4-deeplift'].mean }} ($\pm$ {{ data[4]['otf_methods']['otf-4-deeplift'].std }})
+                                        & {{ data[6]['otf_methods']['otf-6-deeplift'].mean }} ($\pm$ {{ data[6]['otf_methods']['otf-6-deeplift'].std }}) \\ \hline
+        Git Rebasin Uniform             & {{ data[2]['git-rebasin_methods']['git-rebasin-2-uniform'].mean }} ($\pm$ {{ data[2]['git-rebasin_methods']['git-rebasin-2-uniform'].std }})
+                                        & N/A
+                                        & N/A \\
+        Git Rebasin Conductance         & {{ data[2]['git-rebasin_methods']['git-rebasin-2-conductance'].mean }} ($\pm$ {{ data[2]['git-rebasin_methods']['git-rebasin-2-conductance'].std }})
+                                        & N/A
+                                        & N/A \\
+        Git Rebasin DeepLIFT            & {{ data[2]['git-rebasin_methods']['git-rebasin-2-deeplift'].mean }} ($\pm$ {{ data[2]['git-rebasin_methods']['git-rebasin-2-deeplift'].std }})
+                                        & N/A
+                                        & N/A \\ \hline
+        HF Uniform (Ours)               & {{ data[2]['hf_methods']['hf-2-uniform'].mean }} ($\pm$ {{ data[2]['hf_methods']['hf-2-uniform'].std }})
+                                        & N/A
+                                        & N/A \\
+        HF Conductance (Ours)           & {{ data[2]['hf_methods']['hf-2-conductance'].mean }} ($\pm$ {{ data[2]['hf_methods']['hf-2-conductance'].std }})
+                                        & N/A
+                                        & N/A \\
+        HF DeepLIFT (Ours)              & {{ data[2]['hf_methods']['hf-2-deeplift'].mean }} ($\pm$ {{ data[2]['hf_methods']['hf-2-deeplift'].std }})
+                                        & N/A
+                                        & N/A \\ \hline
+        KF Uniform (ours)               & {{ data[2]['kf_methods']['kf-2-uniform'].mean }} ($\pm$ {{ data[2]['kf_methods']['kf-2-uniform'].std }})
+                                        & {{ data[4]['kf_methods']['kf-4-uniform'].mean }} ($\pm$ {{ data[4]['kf_methods']['kf-4-uniform'].std }})
+                                        & {{ data[6]['kf_methods']['kf-6-uniform'].mean }} ($\pm$ {{ data[6]['kf_methods']['kf-6-uniform'].std }}) \\
+        KF Conductance (ours)           & {{ data[2]['kf_methods']['kf-2-conductance'].mean }} ($\pm$ {{ data[2]['kf_methods']['kf-2-conductance'].std }})
+                                        & {{ data[4]['kf_methods']['kf-4-conductance'].mean }} ($\pm$ {{ data[4]['kf_methods']['kf-4-conductance'].std }})
+                                        & {{ data[6]['kf_methods']['kf-6-conductance'].mean }} ($\pm$ {{ data[6]['kf_methods']['kf-6-conductance'].std }}) \\
+        KF DeepLIFT (ours)              & {{ data[2]['kf_methods']['kf-2-deeplift'].mean }} ($\pm$ {{ data[2]['kf_methods']['kf-2-deeplift'].std }})
+                                        & {{ data[4]['kf_methods']['kf-4-deeplift'].mean }} ($\pm$ {{ data[4]['kf_methods']['kf-4-deeplift'].std }})
+                                        & {{ data[6]['kf_methods']['kf-6-deeplift'].mean }} ($\pm$ {{ data[6]['kf_methods']['kf-6-deeplift'].std }}) \\ \hline                    
+        KF-Gradient Uniform (ours)      & {{ data[2]['alf_methods']['alf-2-uniform'].mean }} ($\pm$ {{ data[2]['alf_methods']['alf-2-uniform'].std }})
+                                        & {{ data[4]['alf_methods']['alf-4-uniform'].mean }} ($\pm$ {{ data[4]['alf_methods']['alf-4-uniform'].std }})
+                                        & {{ data[6]['alf_methods']['alf-6-uniform'].mean }} ($\pm$ {{ data[6]['alf_methods']['alf-6-uniform'].std }}) \\
+        KF-Gradient Conductance (ours)  & {{ data[2]['alf_methods']['alf-2-conductance'].mean }} ($\pm$ {{ data[2]['alf_methods']['alf-2-conductance'].std }})
+                                        & {{ data[4]['alf_methods']['alf-4-conductance'].mean }} ($\pm$ {{ data[4]['alf_methods']['alf-4-conductance'].std }})
+                                        & {{ data[6]['alf_methods']['alf-6-conductance'].mean }} ($\pm$ {{ data[6]['alf_methods']['alf-6-conductance'].std }}) \\
+        KF-Gradient DeepLIFT (ours)     & {{ data[2]['alf_methods']['alf-2-deeplift'].mean }} ($\pm$ {{ data[2]['alf_methods']['alf-2-deeplift'].std }})
+                                        & {{ data[4]['alf_methods']['alf-4-deeplift'].mean }} ($\pm$ {{ data[4]['alf_methods']['alf-4-deeplift'].std }})
+                                        & {{ data[6]['alf_methods']['alf-6-deeplift'].mean }} ($\pm$ {{ data[6]['alf_methods']['alf-6-deeplift'].std }}) \\
+        \bottomrule
+    \end{tabular}
+    % \caption{ {{ data["caption"] }} }
+% \end{table}
