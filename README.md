@@ -17,7 +17,7 @@
 
 ## Repository Structure
 ```
-Deep-Learning-Project-Model-Fusion/
+neuron-interpolation-model-fusion/
 ├── example-base-modes/         # Pretrained Models to fuse with!
 ├── models/                      # Neural network architectures (MLP, VGG, ViT)
 ├── main_scripts/
